@@ -107,6 +107,7 @@
             // sumRB
             // 
             this.sumRB.AutoSize = true;
+            this.sumRB.Checked = true;
             this.sumRB.Location = new System.Drawing.Point(7, 20);
             this.sumRB.Name = "sumRB";
             this.sumRB.Size = new System.Drawing.Size(59, 17);
@@ -157,6 +158,7 @@
             this.resolutionCB.TabIndex = 4;
             this.resolutionCB.Text = "Разрешить посчитать";
             this.resolutionCB.UseVisualStyleBackColor = true;
+            this.resolutionCB.CheckStateChanged += new System.EventHandler(this.resolutionCB_CheckStateChanged);
             // 
             // calculateBt
             // 
@@ -166,6 +168,7 @@
             this.calculateBt.TabIndex = 6;
             this.calculateBt.Text = "Посчитать";
             this.calculateBt.UseVisualStyleBackColor = true;
+            this.calculateBt.Click += new System.EventHandler(this.calculateBt_Click);
             // 
             // Result
             // 
