@@ -16,5 +16,34 @@ namespace HomeWorkForms_1
         {
             InitializeComponent();
         }
+        public double Number1
+        {
+            get; private set;
+        }
+        public double Number2
+        {
+            get; private set;
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            CheckResolution();
+        }
+        private void CheckResolution()
+        {
+            if (resolutionCB.Checked)
+            {
+                calculateBt.Enabled=true;
+            }
+            else
+            {
+                calculateBt.Enabled = false;
+            }
+        }
+        private void CheckInputData()
+        {
+           
+
+
+        }
     }
 }
