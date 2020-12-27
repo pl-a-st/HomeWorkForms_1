@@ -16,14 +16,23 @@ namespace HomeWorkForms_1
         {
             InitializeComponent();
         }
+        /// <summary>
+        ////Число 1
+        /// </summary>
         public double Number1
         {
             get; private set;
         }
+        /// <summary>
+        ///Число 2
+        /// </summary>
         public double Number2
         {
             get; private set;
         }
+        /// <summary>
+        /// Результат операции
+        /// </summary>
         public double ResultOperation
         {
             get; private set;
@@ -32,6 +41,9 @@ namespace HomeWorkForms_1
         {
             CheckResolution();
         }
+        /// <summary>
+        /// Проверить разрешение вычисления
+        /// </summary>
         private void CheckResolution()
         {
             if (resolutionCB.Checked)
@@ -43,7 +55,11 @@ namespace HomeWorkForms_1
                 calculateBt.Enabled = false;
             }
         }
-        private bool CheckInputData()
+       /// <summary>
+       /// Проверить и зарегестрировать введенные числа
+       /// </summary>
+       /// <returns></returns>
+        private bool CheckRegisterInputData()
         {
             try
             {
@@ -73,15 +89,23 @@ namespace HomeWorkForms_1
             return false;
 
         }
-
+        /// <summary>
+        /// Изменить разрешение на вычисление
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void resolutionCB_CheckStateChanged(object sender, EventArgs e)
         {
             CheckResolution();
         }
-
+        /// <summary>
+        /// Посчитать результат
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void calculateBt_Click(object sender, EventArgs e)
         {
-            if(CheckInputData())
+            if(CheckRegisterInputData())
             {
                 if (sumRB.Checked)
                 {
